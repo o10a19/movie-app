@@ -1,0 +1,79 @@
+.genres-page {
+  padding: 2rem;
+  min-height: 100vh;
+  background-color: var(--background-color);
+}
+
+.genres-page h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--text-color);
+}
+
+.genres-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+.genre-card {
+  position: relative;
+  height: 150px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: var(--card-background);
+  border: 1px solid var(--border-color);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s;
+}
+
+.genre-card:hover {
+  transform: translateY(-5px);
+}
+
+.genre-card h2 {
+  color: var(--text-color);
+  text-align: center;
+  z-index: 1;
+}
+
+.genre-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6));
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 1rem;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.genre-card:hover .genre-overlay {
+  opacity: 1;
+}
+
+.genre-overlay span {
+  color: white;
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+}
+
+.loading, .error {
+  text-align: center;
+  padding: 2rem;
+  color: var(--text-color);
+}
+
+.error {
+  color: #dc3545;
+}

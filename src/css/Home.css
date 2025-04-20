@@ -1,0 +1,114 @@
+.home {
+  padding: 2rem 0;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: var(--background-color);
+}
+
+.search-form {
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  display: flex;
+  gap: 1rem;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+.search-input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background-color: var(--card-background);
+  color: var(--text-color);
+  font-size: 1rem;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--hover-color);
+}
+
+.search-button {
+  padding: 0.75rem 1.5rem;
+  background-color: var(--button-background);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-weight: 500;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.search-button:hover {
+  border-color: var(--hover-color);
+  background-color: var(--hover-color);
+  color: white;
+}
+
+@media (max-width: 639px) {
+  .home {
+    padding: 1rem 0;
+  }
+
+  .search-form {
+    margin-bottom: 1rem;
+  }
+}
+
+.movies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 3rem;
+  padding: 2rem;
+  width: 100%;
+  max-width: 1800px;
+  margin: 0 auto;
+}
+
+.load-more {
+  display: block;
+  margin: 2rem auto;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--button-background);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.load-more:hover {
+  border-color: var(--hover-color);
+  background-color: var(--hover-color);
+  color: white;
+}
+
+.clear-search {
+  padding: 0.75rem 1.5rem;
+  background-color: var(--button-background);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-weight: 500;
+  transition: all 0.2s;
+  margin-left: 0.5rem;
+}
+
+.clear-search:hover {
+  border-color: #dc3545;
+  background-color: #dc3545;
+  color: white;
+}
+
+.error-message {
+  text-align: center;
+  color: #dc3545;
+  margin: 1rem 0;
+}
+
+.loading {
+  text-align: center;
+  padding: 2rem;
+  color: var(--text-color);
+}
